@@ -37,7 +37,7 @@ body *:after {
 
 /* ANIMATIONS */
 
-.cloud__one {
+.cloud-one {
 	-webkit-animation: animateCloud 35s linear infinite;
 	-moz-animation: animateCloud 35s linear infinite;
 	animation: animateCloud 35s linear infinite;
@@ -45,46 +45,6 @@ body *:after {
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
 	transform: scale(0.65);
-}
-
-.cloud__two {
-	-webkit-animation: animateCloud 20s linear infinite;
-	-moz-animation: animateCloud 20s linear infinite;
-	animation: animateCloud 20s linear infinite;
-	
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
-}
-
-.cloud__three {
-	-webkit-animation: animateCloud 30s linear infinite;
-	-moz-animation: animateCloud 30s linear infinite;
-	animation: animateCloud 30s linear infinite;
-	
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	transform: scale(0.5);
-}
-
-.cloud__four {
-	-webkit-animation: animateCloud 18s linear infinite;
-	-moz-animation: animateCloud 18s linear infinite;
-	animation: animateCloud 18s linear infinite;
-	
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
-}
-
-.cloud__five {
-	-webkit-animation: animateCloud 25s linear infinite;
-	-moz-animation: animateCloud 25s linear infinite;
-	animation: animateCloud 25s linear infinite;
-	
-	-webkit-transform: scale(0.55);
-	-moz-transform: scale(0.55);
-	transform: scale(0.55);
 }
 
 /* OBJECTS */
@@ -284,7 +244,8 @@ body *:after {
   margin: auto;
   width: 100%;
   height: 25rem;
-  background: linear-gradient(rgba(96, 139, 136, 0.5), #f3cece);
+  background: #29284c;
+  background-image: linear-gradient(#29284c 0%, #4c4b82 10%, #717ae1 60%, #75e2fa 90%);
   z-index: 99;
   overflow: hidden;
   box-shadow: inset 0 0 5rem 0 rgba(37, 37, 41, 0.5);
@@ -320,16 +281,6 @@ body *:after {
     z-index: 2;
 }
   
-.lighthouse-group .land {
-    width: 400px;
-    height: 60px;
-    left: -30px;
-    bottom: 0;
-    background-image: linear-gradient(to top, #29284c 80%, #717ae1 100%);
-    transform: skewX(35deg);
-    border-radius: 10px;
-}
-  
 .lighthouse-group .lighthouse-holder {
     height: 480px;
     width: 100px;
@@ -341,15 +292,15 @@ body *:after {
     width: 100%;
     height: 100%;
     transform: perspective(600px) rotateX(20deg);
-    background-color: #d6d9f6;
-    background-image: repeating-linear-gradient(-40deg, transparent, transparent 60px, #4c4b82 60px, #4c4b82 120px);
+    background-color: #fff;
+    background-image: repeating-linear-gradient(-40deg, transparent, transparent 60px, #1a1a1a 60px,  #1a1a1a 120px);
 }
   
 .lighthouse-group .lighthouse:after {
     width: 100%;
     height: 100%;
     opacity: 1;
-    background-image: linear-gradient(90deg, rgba(214, 217, 246, 0.6) 0%, #29284c 8%, transparent 70%, rgba(214, 217, 246, 0.4) 100%);
+    background-image: linear-gradient(90deg, rgba(214, 217, 246, 0.6) 0%, #1a1a1a 8%, transparent 70%, rgba(214, 217, 246, 0.4) 100%);
 }
   
 .shadow {
@@ -392,7 +343,7 @@ body *:after {
 }
   
 .door {
-    background-color: #29284c;
+    background-color:  #1a1a1a;
     height: 40px;
     width: 25px;
     left: 38px;
@@ -454,7 +405,7 @@ body *:after {
     bottom: 45px;
     border-left: 50px solid rgba(255, 255, 255, 0);
     border-right: 50px solid rgba(255, 255, 255, 0);
-    border-bottom: 40px solid #29284c;
+    border-bottom: 40px solid #1a1a1a;
 }
   
 .roof:before {
@@ -462,7 +413,7 @@ body *:after {
     height: 14px;
     left: -7px;
     bottom: -7px;
-    background-color: #29284c;
+    background-color: #1a1a1a;
     border-radius: 50%;
 }
   
@@ -471,7 +422,7 @@ body *:after {
     height: 14px;
     left: -2px;
     bottom: 5px;
-    background-color: #29284c;
+    background-color:#1a1a1a;
     border-radius: 3px;
 }
   
@@ -501,30 +452,46 @@ body *:after {
     transform-origin: left center;
     transform: perspective(500px) rotateY(-35deg);
     background: linear-gradient(90deg, #f7f2b4 40%, rgba(255, 255, 255, 0) 100%);
-    -webkit-animation-delay: 400s;
-    -moz-animation-delay: 400s;
-    -o-animation-delay: 400s;
-    animation-delay: 400s;
-    animation: lightGlow 5s linear infinite;
+    opacity: 0;
 } 
 
 .show-light {
-    .flash {
-        -webkit-animation-name: flash;
-        -moz-animation-name: flash;
-        -o-animation-name: flash;
-        animation-name: flash;
-        /* Задержка перед началом */
-        -webkit-animation-delay: 1s;
-        -moz-animation-delay: 1s;
-        -o-animation-delay: 1s;
-        animation-delay: 1s;
-        /* Продолжительность анимации */
-        -webkit-animation-duration: 1s;
-        -moz-animation-duration: 1s;
-        -o-animation-duration: 1s;
-        animation-duration: 1s;
-       }
+    -webkit-animation-name: lightGlow;
+    -moz-animation-name: lightGlow;
+    -o-animation-name: lightGlow;
+    animation-name: lightGlow;
+
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+    -o-animation-duration: 10s;
+    animation-duration: 10s;
+}
+
+.light-in-windows {
+    background: linear-gradient(90deg, #f7f2b4 40%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    -webkit-animation-name: lightGlow;
+    -moz-animation-name: lightGlow;
+    -o-animation-name: lightGlow;
+    animation-name: lightGlow;
+
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+    -o-animation-duration: 10s;
+    animation-duration: 10s;
 }
   
 .glow {
