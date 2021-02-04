@@ -1,40 +1,29 @@
-body {
-	background: #00b4ff;
-	color: #333;
-	font: 100% Arial, Sans Serif;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-}
-
 html {
     font-size: 0.97vh;
     width: 100%;
     height: 100%;
     background: #f3cece;
     overflow: hidden;
-  }
+}
   
-  body {
+body {
     margin: 0;
     overflow: hidden;
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(96, 139, 136, 0.5), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
     box-shadow: inset 0 0 5rem 0 #252529;
-  }
-  body,
-  body *,
-  body *:before,
-  body *:after {
+}
+
+body,
+body *,
+body *:before,
+body *:after {
     display: block;
-    top: 0;
-    left: 0;
     box-sizing: border-box;
     position: absolute;
     content: "";
-  }
+}
 
 .cloud-background {
     bottom: 0;
@@ -43,7 +32,7 @@ html {
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: -1;
+	z-index: 1;
 }
 
 /* ANIMATIONS */
@@ -104,7 +93,8 @@ html {
 	background: #fff;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
-	border-radius: 100px;
+    border-radius: 100px;
+    opacity: 0.7;
 	
 	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
@@ -322,7 +312,242 @@ html {
   animation: waves 8s 2s ease-in-out infinite;
 }
 
+.lighthouse-group {
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+  
+.lighthouse-group .land {
+    width: 400px;
+    height: 60px;
+    left: -30px;
+    bottom: 0;
+    background-image: linear-gradient(to top, #29284c 80%, #717ae1 100%);
+    transform: skewX(35deg);
+    border-radius: 10px;
+}
+  
+.lighthouse-group .lighthouse-holder {
+    height: 480px;
+    width: 100px;
+    bottom: 80px;
+    left: 180px;
+}
+  
+.lighthouse-group .lighthouse {
+    width: 100%;
+    height: 100%;
+    transform: perspective(600px) rotateX(20deg);
+    background-color: #d6d9f6;
+    background-image: repeating-linear-gradient(-40deg, transparent, transparent 60px, #4c4b82 60px, #4c4b82 120px);
+}
+  
+.lighthouse-group .lighthouse:after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-image: linear-gradient(90deg, rgba(214, 217, 246, 0.6) 0%, #29284c 8%, transparent 70%, rgba(214, 217, 246, 0.4) 100%);
+}
+  
+.shadow {
+    width: 117px;
+    height: 50px;
+    left: -32px;
+    bottom: -70px;
+    background: #29284c;
+    transform: skewX(-45deg);
+}
+  
+.windows {
+    height: 100%;
+    width: 100%;
+}
+  
+.windows .window {
+    background-color: #29284c;
+    height: 25px;
+    width: 15px;
+    left: 43px;
+    border-bottom: 2px solid rgba(185, 190, 250, 0.7);
+    border-radius: 25px 25px 0 0;
+}
+  
+.windows .window:nth-of-type(1) {
+    bottom: 90px;
+}
+  
+.windows .window:nth-of-type(2) {
+    bottom: 180px;
+}
+  
+.windows .window:nth-of-type(3) {
+    bottom: 270px;
+}
+  
+.windows .window:nth-of-type(4) {
+    bottom: 360px;
+}
+  
+.door {
+    background-color: #29284c;
+    height: 40px;
+    width: 25px;
+    left: 38px;
+    bottom: -2px;
+    border-radius: 2px 2px 0 0;
+}
+  
+.door .stairs {
+    width: 27px;
+    height: 28px;
+    background-color: #29284c;
+    top: 34px;
+    left: -1px;
+    transform: perspective(100px) rotateX(45deg);
+    background-image: repeating-linear-gradient(to bottom, #29284c, #29284c 4px, #b9befa 4px, rgba(255, 255, 255, 0.1) 5px);
+}
+  
+.top {
+    width: 94px;
+    height: 60px;
+    left: 3px;
+    top: -15px;
+}
+  
+.top .rail {
+    width: 100%;
+    height: 17px;
+    bottom: 1px;
+    border: 3px solid #29284c;
+    border-radius: 1px;
+    transform: perspective(1000px) rotateX(-35deg);
+    background-image: repeating-linear-gradient(90deg, #29284c, #29284c 3px, #9e9ebe 3px, #f7f2b4 10px);
+    background-position: -2px 0;
+}
+  
+.middle {
+    width: 88px;
+    height: 35px;
+    left: 3px;
+    bottom: 14px;
+    border: 2px solid #29284c;
+    border-radius: 3px;
+    background-image: repeating-linear-gradient(90deg, #29284c, #29284c 4px, #9e9ebe 4px, rgba(255, 255, 255, 0) 21px);
+    background-position: -2px 0;
+}
+  
+.middle:before {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #f7f2b4;
+    box-shadow: 0 0 10px #d6d9f6, 0 0 20px #f7f2b4, 0 0 30px #f7f2b4, 0 0 40px #f7f2b4, 0 0 70px #f7f2b4;
+}
+  
+.roof {
+    width: 0px;
+    height: 0px;
+    left: -3px;
+    bottom: 45px;
+    border-left: 50px solid rgba(255, 255, 255, 0);
+    border-right: 50px solid rgba(255, 255, 255, 0);
+    border-bottom: 40px solid #29284c;
+}
+  
+.roof:before {
+    width: 14px;
+    height: 14px;
+    left: -7px;
+    bottom: -7px;
+    background-color: #29284c;
+    border-radius: 50%;
+}
+  
+.roof:after {
+    width: 4px;
+    height: 14px;
+    left: -2px;
+    bottom: 5px;
+    background-color: #29284c;
+    border-radius: 3px;
+}
+  
+.roof .roof-light {
+    width: 100px;
+    height: 40px;
+    left: -50px;
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    background-image: linear-gradient(135deg, #29284c 40%, rgba(247, 242, 180, 0.5) 100%);
+}
+  
+.light-container {
+    height: 40px;
+    width: 35vw;
+    bottom: 4px;
+    left: 40px;
+    transform-style: preserve-3d;
+    transform-origin: left bottom;
+    transform: perspective(500px) rotateY(0deg);
+    animation: lightRotate 10s linear infinite;
+}
+  
+.light-container .light {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transform: perspective(500px) rotateY(-35deg);
+    background: linear-gradient(90deg, #f7f2b4 40%, rgba(255, 255, 255, 0) 100%);
+    -webkit-animation-delay: 400s;
+    -moz-animation-delay: 400s;
+    -o-animation-delay: 400s;
+    animation-delay: 400s;
+    animation: lightGlow 5s linear infinite;
+} 
+
+.show-light {
+    .flash {
+        -webkit-animation-name: flash;
+        -moz-animation-name: flash;
+        -o-animation-name: flash;
+        animation-name: flash;
+        /* Задержка перед началом */
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        -o-animation-delay: 1s;
+        animation-delay: 1s;
+        /* Продолжительность анимации */
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        animation-duration: 1s;
+       }
+}
+  
+.glow {
+    width: 100px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: #f7f2b4;
+    opacity: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f7f2b4, 0 0 20px #f7f2b4, 0 0 30px #f7f2b4, 0 0 40px #f7f2b4, 0 0 50px #f7f2b4, 0 0 60px #f7f2b4, 0 0 70px #f7f2b4, 0 0 80px #f7f2b4;
+}
+  
 /* KEYFRAMES */
+
+@keyframes lightGlow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 @-webkit-keyframes animateCloud {
     0% {
