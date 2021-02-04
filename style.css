@@ -322,3 +322,96 @@ html {
   animation: waves 8s 2s ease-in-out infinite;
 }
 
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes shake {
+    40% {
+      transform: translate3d(0, 0.5rem, 0);
+    }
+    60% {
+      transform: translate3d(0, -0.25rem, 0);
+    }
+    80% {
+      transform: translate3d(0, 0.15rem, 0);
+    }
+  }
+
+@keyframes fall {
+    100% {
+      transform: translate3d(0, 15rem, 0);
+      opacity: 0;
+    }
+  }
+
+@keyframes sun {
+    20%, 80% {
+      filter: blur(1rem) brightness(390%);
+    }
+    27%, 73% {
+      filter: blur(1rem) brightness(200%);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes stars {
+    50% {
+      opacity: 1;
+    }
+  }
+
+@keyframes sky {
+    20%, 85% {
+      filter: brightness(100%);
+      opacity: 0;
+    }
+    30%, 70% {
+      filter: brightness(100%);
+      opacity: 1;
+    }
+    40%, 60% {
+      filter: brightness(20%);
+      opacity: 1;
+    }
+  }
+
+@keyframes lensflair {
+    20%, 30%, 70%, 80% {
+      opacity: 0;
+    }
+    25%, 75% {
+      opacity: 0.05;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
