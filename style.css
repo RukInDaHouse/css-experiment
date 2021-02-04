@@ -248,8 +248,8 @@ body,
 	width: 100%;
 	height: 100%;
 	transform: perspective(600px) rotateX(20deg);
-	background-color: #fff;
-	background-image: repeating-linear-gradient(-40deg, transparent, transparent 60px, #1a1a1a 60px,  #1a1a1a 120px);
+	background-color: #1a1a1a;
+	background-image: repeating-linear-gradient(-40deg, transparent, transparent 60px, #000 60px,  #000 120px);
 }
 
 .lighthouse-group .lighthouse:after {
